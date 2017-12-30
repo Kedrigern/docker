@@ -11,4 +11,4 @@ And my [notes](docker.md) about docker.
 
 ## Docker compose
 
-More complex examples of whole application ekosystems in docker managed by Docker compose.
+More complex examples of whole application ecosystems in docker managed by Docker compose.

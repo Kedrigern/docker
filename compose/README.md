@@ -1,5 +1,13 @@
 # Docker compose
 
+Docker compose nám umožňuje základní orchestraci více kontejnerů.
+
+Příklady:
+
+- [Python - Redis](pr-example/)
+- [Python - PHP](pp-example/)
+
+
 ```bash
 sudo docker-compose -f definition.yaml up -d
 ```
@@ -42,4 +50,3 @@ services:
       - redmine-data:/home/redmine/data
       - redmine-logs:/var/log/redmine
 ```
-
