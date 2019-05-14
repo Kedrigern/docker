@@ -1,5 +1,7 @@
 # Flask app in docker
 
+Velmi jednoduchá aplikace ve Flasku v Dockeru.
+
 ```
 docker build -t dockerflask .
 docker run -p 3000:80 dockerflask

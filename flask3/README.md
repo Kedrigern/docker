@@ -1,14 +1,15 @@
 
 Spustíme aplikaci:
 
-```
+```bash
 sudo ./start.sh
 ```
 
 Nyní nám běží na `0.0.0.0:56733`
 
 Popřípadě kontejnery:
-```
+
+```bash
 sudo docker ps -a
 ```
 
