@@ -1,2 +1,6 @@
 __pycache__
 supervisord.pid
+venv
+
+*.pyc
+*.sqlite
