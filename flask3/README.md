@@ -1,17 +1,6 @@
 
-Spustíme aplikaci:
+1. Spuštění aplikace v dockeru: `sudo ./start.sh`
+2. Aplikace nyní nám běží na `0.0.0.0:56733`
+3. Můžeme se podívat na běžící kontejnery: `sudo docker ps -a`
 
-```bash
-sudo ./start.sh
-```
-
-Nyní nám běží na `0.0.0.0:56733`
-
-Popřípadě kontejnery:
-
-```bash
-sudo docker ps -a
-```
-
-Zdroj:
-https://www.digitalocean.com/community/tutorials/how-to-build-and-deploy-a-flask-application-using-docker-on-ubuntu-18-04
+Zdroj [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-build-and-deploy-a-flask-application-using-docker-on-ubuntu-18-04)
