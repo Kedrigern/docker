@@ -18,8 +18,19 @@ Run image: `docker run --name cislovky -v "$PWD/instance:/app/instance:rw" -p 80
 
 ## Anatomy
 
+Image spouští `main.py` v `app`, abychom naši aplikaci nemuseli upravovat, tak uděláme wrapper:
+
+```python3
+from cislovky import create_app
+
+app = create_app()
 ```
-.
+
+Aplikace využívá SQLite, čili někde musíme mít soubor s DB a musí být viditelný z kontjneru. DB inicializujeme mimo kontejner. Do kontejneru se dostane pomocí: `-v "$PWD/instance:/app/instance:rw"`
+
+Celá struktura vypadá takto:
+
+```
 ├── app
 │   ├── cislovky
 │   │   ├── db.py
@@ -40,12 +51,4 @@ Run image: `docker run --name cislovky -v "$PWD/instance:/app/instance:rw" -p 80
 ├── cislovky.sqlite
 ├── Dockerfile
 └── README.md
-```
-
-`main.py` is entrypoint:
-
-```python3
-from cislovky import create_app
-
-app = create_app()
 ```
