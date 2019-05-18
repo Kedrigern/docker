@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}HOME{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<p>Home page!</p>
+
+<h2>Config</h2>
+
+<p>Python version: {{pyversion}}</p>
+<p>Flask version: {{flaskversion}}</p>
+<p>Instance path: <code>{{in_path}}</code></p>
+<p>SQLite path: <code>{{cfg["DATABASE"]}}</code></p>
+<p>Instance folder content: <code>{% for file in dirs %}{{file}}{% endfor %}</code></p>
+
+
+<table>
+{% for key, val in cfg.items() %}
+  <tr>
+    <td>{{key}}</td>
+    <td>{{val}}</td>
+  </tr>
+{% endfor %}
+</table>
+
+{% endblock %}
